@@ -237,3 +237,29 @@ function check(){
 		alert("果物じゃないよ！");
 	};
 };
+
+
+///スライドショー
+var slider = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg", ];
+var aaa = 0;
+function cng(i){
+    var i,num,str;
+    if(i == 1){
+        aaa++;
+        if(aaa >= slider.length){
+            aaa = 0;
+        }
+    }else{
+        aaa--;
+        if(aaa < 0){
+            aaa = slider.length-1;
+        }
+    }
+
+    document.getElementById('main_image').src = slider[aaa];
+
+    num = aaa + 1;
+    str = num  + "/" + slider.length;
+    document.getElementById("number").innerHTML = str;
+}
+
