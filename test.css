@@ -1,38 +1,41 @@
 @charset "UTF-8";
 
-body{
-	font-family: 'メイリオ','Hiragino Kaku Gothic Pro', sans-serif;
-    margin: 0px;
-    background-color: #E6E6E6;
+body {
+	font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+	margin: 0px;
+	background-color: #E6E6E6;
 }
 
-#wallpaper{
+#wallpaper {
 	height: auto;
 	width: 1000px;
 	background-color: gray;
 	margin: 0px auto 0px auto;
 }
 
-.top{
+.top {
 	height: auto;
 	width: 100%;
 	box-sizing: border-box;
 	background-color: pink;
 	padding: 20px;
 }
-.title{
+
+.title {
 	font-size: 100px;
 	padding: 0px;
 	margin: 0px;
 	font-weight: bold;
 	text-align: center;
 }
-.annai{
+
+.annai {
 	height: auto;
 	width: 100%;
 	background-color: yellow;
 }
-.annai ul{
+
+.annai ul {
 	height: auto;
 	width: 100%;
 	background-color: green;
@@ -40,12 +43,14 @@ body{
 	margin: 0px;
 	padding: 0px;
 }
-.annai ul:after{
-	content:"";
+
+.annai ul:after {
+	content: "";
 	display: block;
 	clear: both;
 }
-.annai li{
+
+.annai li {
 	height: 300px;
 	width: 33.33333333333%;
 	background-color: lightblue;
@@ -53,23 +58,26 @@ body{
 	padding: 1%;
 	box-sizing: border-box;
 }
-.annai ul li button{
+
+.annai ul li button {
 	height: 30px;
 	width: 80%;
 	text-align: center;
 }
-.ClearFix{
+
+.ClearFix {
 	height: auto;
 	width: 100%;
 	background-color: #E6E6E6;
 }
 
-.ClearFix:after{
-	content:"";
+.ClearFix:after {
+	content: "";
 	display: block;
 	clear: both;
 }
-.contact{
+
+.contact {
 	height: auto;
 	width: 60%;
 	background-color: white;
@@ -77,7 +85,8 @@ body{
 	padding: 10px;
 	box-sizing: border-box;
 }
-.subbox{
+
+.subbox {
 	height: 500px;
 	width: 40%;
 	background-color: #F7F8E0;
@@ -85,28 +94,33 @@ body{
 	padding: 2%;
 	box-sizing: border-box;
 }
-.subbox h2{
+
+.subbox h2 {
 	margin: 0px;
 	padding: 5px 0px 0px 5px;
 	border-bottom: 2px dotted #000000;
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
 	color: white;
 }
-.t{
+
+.t {
 	width: 140px;
 	height: auto;
 }
-.foot{
+
+.foot {
 	height: 300px;
 	width: 100%;
 	background-color: #DF7401;
 }
-.marker{
-	background: linear-gradient(to bottom, rgba(0,0,0,0),rgba(0,0,0,0),yellow, yellow);
-	font-weight:bold;
+
+.marker {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), yellow, yellow);
+	font-weight: bold;
 }
-.name{
-	color:red;
+
+.name {
+	color: red;
 	text-decoration: underline;
 	margin: 0px;
 	font-weight: bold;
