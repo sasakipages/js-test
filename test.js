@@ -1,13 +1,22 @@
 //ToDoリスト
 function todo(){
-	var list, a, i;
-	list = ["あれ","これ","それ","どれ"];
-	a = "";
-	for(i = 0; i < list.length; i++){
-		a = a + list[i] + "<br />";
-	};
-	document.getElementById("todo").innerHTML = a;
+    var box,list,a,i;
+    box = ["あああ","いいい","ううう","えええ"];
+    list = document.getElementById("todo");
+    a = "";
+    for(i = 0; i < box.length; i++){
+        a = a + box[i] + "<br />";
+    }
+    list.innerHTML = a;
+
+    if(list.style.display == "none"){
+        list.style.display = "";
+    }else{
+        list.style.display = "none";
+    }
 };
+window.addEventListener("load",todo,false);
+
 
 //お客様情報
 function soshin(){
