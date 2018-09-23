@@ -2,130 +2,164 @@
 <html lang="ja">
 
 <head>
-    <meta charset="UTF-8">
-    <title>JavaTest</title>
-    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+	<meta charset="UTF-8">
+	<title>JavaTest</title>
+	<link href="./css/style.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
+
 <body>
 	<div id="wallpaper">
-		<div class="top">
-			<p class="title">JavaScriptの練習</p>
-		</div>
-		<div class="annai">
-			<ul>
-				<li>
+		<header>
+            <div class="top">
+				<h1 class="title">JavaScript</h1>
+                <nav>
+                   <ul>
+                        <li>あああ</li>
+                        <li>いいい</li>
+                        <li>ううう</li>
+                   </ul>
+                </nav>
+			</div>
+			<div class="annai">
+                <div id="up">
+                    <img id="main_image" src="image/1.jpg">
+                </div>
+                <div id="down">
+                    <button type="button" onclick="cng(-1);" class="slide-button">前</button>
+                    <span id="number">1/4</span>
+                    <button type="button" onclick="cng(1);" class="slide-button">次</button>
+                </div>
+		    </div>
+        </header>
+        <main class="contact">
+            <section class="container__center">
+                <p class="name">↓なしなし</p>
+                <div>お客様情報をご記入ください</div>
+                姓　：<input type="text" id="sei"><br />
+                名　：<input type="text" id="mei"><br />
+                住所：<input type="text" id="add"><br />
+                <p class="name">↓ズラ</p>
+                生年月日：<select id="nen"></select>年
+                <select id="gatsu"></select>月
+                <select id="hi"></select>日
+                <button type="button" onclick="soshin();">送信</button>
+            </section>
+            <hr>
+				<section class="container__center">
 					<p class="name">リストフォー</p>
 					<button type="button" onclick="todo();">やることリスト</button>
 					<div id="todo"></div>
-				</li>
-				<li>
-					<p class="name">↓なしなし</p>
-					<div>お客様情報をご記入ください</div>
-					姓　：<input type="text" id="sei"><br />
-						名　：<input type="text" id="mei"><br />
-						住所：<input type="text" id="add"><br />
-						<p class="name">↓ズラ</p>
-						生年月日：<select id="nen"></select>年
-						<select id="gatsu"></select>月
-						<select id="hi"></select>日
-					<button type="button" onclick="soshin();">送信</button>
-				</li>
-				<li>
-					<div id="up" style="text-align:center;">
-						<img id="main_image" src="image/1.jpg">
-					</div>
-					<div id="down" style="text-align:center;">
-						<button type="button" onclick="cng(-1);">前</button>
-						<span id="number">1/4</span>
-						<button type="button" onclick="cng(1);">次</button>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="ClearFix">
-			<main class="contact">
+				</section>
+				<hr>
 				<!--リンゴの個数-->
-				<div>500円のりんごを<select id="rx"></select>個ください。<br />
-					<button type="button" onclick="rxbuy(500);">合計金額を計算</button><br />
-				<span id="rxbuy" class="name">[ガッチャンコ]</span></div>
+				<section class="container">
+					<div class="question">500円のりんごを<select id="rx"></select>個ください。<br />
+						<button type="button" onclick="rxbuy(500);">合計金額を計算</button></div>
+					<div id="rxbuy" class="name answer">[ガッチャンコ]</div>
+				</section>
 				<hr>
 				<!--リンゴとみかんの個数-->
-				<div>500円のりんごを<select id="ringo"></select>個と、700円のみかんを<select id="mikan"></select>個ください。<br />
-					<button type="button" onclick="gokei(500, 700);">合計金額を計算</button><br />
-				<span id="gokei" class="name">[ガッチャンコ]</span></div>
+				<section class="container">
+					<div class="question">500円のりんごを<select id="ringo"></select>個と、<br>
+						700円のみかんを<select id="mikan"></select>個ください。
+						<button type="button" onclick="gokei(500, 700);">合計金額を計算</button></div>
+					<div id="gokei" class="name answer">[ガッチャンコ]</div>
+				</section>
 				<hr>
 				<!--オレンジの注文個数-->
-				<p class="name">カウンター</p>
-				<div>1000円のオレンジの注文個数：<span id="oko">0</span>個<br />
-					<button type="button" onclick="minas();">マイナス</button><button type="button" onclick="plus();">プラス</button><br />
-					<button type="button" style="width:140px;" onclick="og(1000);">合計金額を計算</button><br />
-				<span id="orange" class="name">[ガッチャンコ]</span></div>
+				<section class="container">
+					<div class="question">
+						<p class="name">カウンター</p>
+						<div>1000円のオレンジの注文個数：<span id="oko">0</span>個<br />
+							<button type="button" onclick="minas();">マイナス</button><button type="button" onclick="plus();">プラス</button><br />
+							<button type="button" onclick="og(1000);">合計金額を計算</button>
+						</div>
+					</div>
+					<div id="orange" class="name answer">[ガッチャンコ]</div>
+				</section>
 				<hr>
 				<!--for-->
-				<p class="name">フォー</p>
-				<button type="button" style="font-size: 16px;" onclick="ff();">for相変わらず難しいね</button>
-				<div id="for"></div>
+				<section class="container__center">
+					<p class="name">フォー</p>
+					<button type="button" style="font-size: 16px;" onclick="ff();">for相変わらず難しいね</button>
+					<div id="for"></div>
+				</section>
 				<hr>
 				<!--永遠コンファーム-->
-				<p class="name">永遠コンファ</p>
-				<button type="button" style="font-size: 16px;" onclick="cc();">永遠コンファーム</button>
+				<section class="container__center">
+					<p class="name">永遠コンファ</p>
+					<button type="button" style="font-size: 16px;" onclick="cc();">永遠コンファーム</button>
+				</section>
 				<hr>
 				<!--足し算をしますので数字を入力して-->
-				<p class="name">ガッチャンコ</p>
-				<div>足し算をしますので数字を入力してください！<br />
-					数字１：<input type="text" id="one"><br />
-					数字２：<input type="text" id="two"><br />
-					<button type="button" style="width:220px;" onclick="done();">DONE</button></div>
-					<hr>
-					<!--りんごorトマト-->
+				<section class="container__center">
+					<p class="name">ガッチャンコ</p>
+					<div>足し算をしますので数字を入力してください！<br />
+						数字１：<input type="text" id="one"><br />
+						数字２：<input type="text" id="two"><br />
+						<button type="button" style="width:220px;" onclick="done();">DONE</button></div>
+				</section>
+				<hr>
+				<!--りんごorトマト-->
+				<section class="container__center">
 					<p class="name">しもしも</p>
 					<div>りんごとトマト、どっちのほうが好きですか？<br />
 						<input type="text" id="aop"><button type="button" onclick="aort();">のほうが好きです。</button></div>
-						<hr>
-						<!--永遠の足し算-->
-						<p class="name">入れ込み</p>
-						<div>入力してくれた文字を永遠と足します！<br />
-							<button type="button" style="font-size: 16px;width:140px;" onclick="ppap();">開始</button>
-						</div>
-							<hr>
-						<!--区切り足し算-->
-						<p class="name">切断</p>
-						<div>","で区切って数字を入力してくれたらそれを足し算します<br />
-							<button type="button" onclick="kanma();">どうぞ。</button>
-						</div>
-						<hr>
-						<!--回分チェッカー-->
-						<p class="name">カイブン</p>
-						<div><button type="button" onclick="kaibun()"; style="font-size: 16px;">回分チェッカー</button></div>
-						<hr>
-						<p class="name">インデ</p>
-						<div>「りんご」「ゴリラ」「ラッパ」「パンツ」のうちどれかを入力してね。値段を言います。<br />
-							<button type="button" onclick="k();">開始</button>
-						</div>
-						<hr>
-						<p class="name">インクル</p>
-						<div>果物の名前を入力してね！<br />
-							<button type="button" onclick="check();">開始</button>
-						</div>
+				</section>
+				<hr>
+				<!--永遠の足し算-->
+				<section class="container__center">
+					<p class="name">入れ込み</p>
+					<div>入力してくれた文字を永遠と足します！<br />
+						<button type="button" style="font-size: 16px;width:140px;" onclick="ppap();">開始</button>
+					</div>
+				</section>
+				<hr>
+				<!--区切り足し算-->
+				<section class="container__center">
+					<p class="name">切断</p>
+					<div>","で区切って数字を入力してくれたらそれを足し算します<br />
+						<button type="button" onclick="kanma();">どうぞ。</button>
+					</div>
+				</section>
+				<hr>
+				<!--回分チェッカー-->
+				<section class="container__center">
+					<p class="name">カイブン</p>
+					<div><button type="button" onclick="kaibun()" ; style="font-size: 16px;">回分チェッカー</button></div>
+				</section>
+				<hr>
+				<section class="container__center">
+					<p class="name">インデ</p>
+					<div>「りんご」「ゴリラ」「ラッパ」「パンツ」のうちどれかを入力してね。値段を言います。<br />
+						<button type="button" onclick="k();">開始</button>
+					</div>
+				</section>
+				<hr>
+				<section class="container__center">
+					<p class="name">インクル</p>
+					<div>果物の名前を入力してね！<br />
+						<button type="button" onclick="check();">開始</button>
+					</div>
+				</section>
+				<hr>
 				<!--クリックされたボタン名を表示する-->
-				<div>クリックされたボタン名を表示する</div>
-				<div id="btg">
-					<button type="button">1</button>
-					<button type="button">2</button>
-					<button type="button">3</button>
-				</div>
+				<section class="container__center">
+					<div>クリックされたボタン名を表示する</div>
+					<div id="btg">
+						<button type="button">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+					</div>
+				</section>
 				<!--動く画像-->
 				<hr>
-				<div style="position:absolute;left:30px;border-style:solid;width:50px;height:50px;" id="moving"></div>
-				<button type="button" onclick="stop();" style="margin-top:70px;">ストップボタン</button>
+				<section class="container__center">
+					<div style="position:absolute;left:30px;border-style:solid;width:50px;height:50px;" id="moving"></div>
+					<button type="button" onclick="stop();" style="margin-top:70px;">ストップボタン</button>
+				</section>
 			</main>
-			<aside class="subbox">
-				<h3>カート</h3>
-				<div id="cart"></div>
-				<hr>
-				<div><button type="button" onclick="al();">合計金額を計算</button><span id="al">ココに金額が表示されます</span></div>
-			</aside>
-		</div>
 		<footer class="foot">
 			<button type="button">
 				<a href="./test/test.html">テストする</a>
