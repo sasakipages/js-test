@@ -247,6 +247,17 @@ function check(){
 	};
 };
 
+//クリックされたボタン名を表示する
+function btn(a){
+    alert(a.target.innerHTML);
+};
+
+window.addEventListener("load",
+    function(){
+        aaa = document.getElementById("btg");
+        aaa.addEventListener("click",btn,false);
+    },
+    false);
 
 ///スライドショー
 var slider = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg", ];
@@ -271,4 +282,3 @@ function cng(i){
     str = num  + "/" + slider.length;
     document.getElementById("number").innerHTML = str;
 }
-
