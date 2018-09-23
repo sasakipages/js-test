@@ -280,25 +280,25 @@ function stop(){
 };
 
 ///スライドショー
-var slider = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg", ];
-var aaa = 0;
+var box = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg", ];
+var a = 0;
 function cng(i){
     var i,num,str;
     if(i == 1){
-        aaa++;
-        if(aaa >= slider.length){
-            aaa = 0;
+        a++;
+        if(a >= box.length){
+            a = 0;
         }
     }else{
-        aaa--;
-        if(aaa < 0){
-            aaa = slider.length-1;
+        a--;
+        if(a < 0){
+            a = box.length-1;
         }
     }
 
-    document.getElementById('main_image').src = slider[aaa];
+    document.getElementById('main_image').src = box[a];
 
-    num = aaa + 1;
-    str = num  + "/" + slider.length;
+    num = a + 1;
+    str = num  + "/" + box.length;
     document.getElementById("number").innerHTML = str;
 }
