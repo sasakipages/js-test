@@ -5,7 +5,7 @@ gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
             baseDir: ".",
-            index: "test.html"
+            index: "index.html"
         }
     });
 });
@@ -16,5 +16,5 @@ gulp.task('bs-reload', function () {
 
 gulp.task('default', ['browser-sync'], function () {
     gulp.watch("*.html", ['bs-reload']);
-    gulp.watch("./*.css", ['bs-reload']);
+    gulp.watch("./css/*.css", ['bs-reload']);
 });
