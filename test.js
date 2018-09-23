@@ -247,6 +247,18 @@ function check(){
 	};
 };
 
+//クリックされたボタン名を表示する
+function btn(a){
+    alert(a.target.innerHTML);
+};
+
+window.addEventListener("load",
+    function(){
+        aaa = document.getElementById("btg");
+        aaa.addEventListener("click",btn,false);
+    },
+    false);
+
 //一定時間ごとにごとに動く画像
 var moving = 30;
 var t;
