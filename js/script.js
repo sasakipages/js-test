@@ -1,13 +1,22 @@
 //ToDoリスト
 function todo(){
-	var list, a, i;
-	list = ["あれ","これ","それ","どれ"];
-	a = "";
-	for(i = 0; i < list.length; i++){
-		a = a + list[i] + "<br />";
-	};
-	document.getElementById("todo").innerHTML = a;
+    var box,list,a,i;
+    box = ["あああ","いいい","ううう","えええ"];
+    list = document.getElementById("todo");
+    a = "";
+    for(i = 0; i < box.length; i++){
+        a = a + box[i] + "<br />";
+    }
+    list.innerHTML = a;
+
+    if(list.style.display == "none"){
+        list.style.display = "";
+    }else{
+        list.style.display = "none";
+    }
 };
+window.addEventListener("load",todo,false);
+
 
 //お客様情報
 function soshin(){
@@ -237,3 +246,59 @@ function check(){
 		alert("果物じゃないよ！");
 	};
 };
+
+//クリックされたボタン名を表示する
+function btn(a){
+    alert(a.target.innerHTML);
+};
+
+window.addEventListener("load",
+    function(){
+        aaa = document.getElementById("btg");
+        aaa.addEventListener("click",btn,false);
+    },
+    false);
+
+//一定時間ごとにごとに動く画像
+var moving = 30;
+var t;
+function move(){
+    moving = moving + 1;
+
+    mov = document.getElementById("moving");
+    mov.style.left = moving + "px";
+};
+
+window.addEventListener("load",
+    function move(){
+        t = setInterval("move()",100);
+    },
+    false);
+
+function stop(){
+    clearInterval(t);
+};
+
+///スライドショー
+var box = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg", ];
+var a = 0;
+function cng(i){
+    var i,num,str;
+    if(i == 1){
+        a++;
+        if(a >= box.length){
+            a = 0;
+        }
+    }else{
+        a--;
+        if(a < 0){
+            a = box.length-1;
+        }
+    }
+
+    document.getElementById('main_image').src = box[a];
+
+    num = a + 1;
+    str = num  + "/" + box.length;
+    document.getElementById("number").innerHTML = str;
+}

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!DOCTYPEhtml>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <title>JavaTest</title>
-    <link href="test.css" rel="stylesheet" type="text/css" />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div id="wallpaper">
@@ -30,7 +30,16 @@
 						<select id="hi"></select>日
 					<button type="button" onclick="soshin();">送信</button>
 				</li>
-				<li></li>
+				<li>
+					<div id="up" style="text-align:center;">
+						<img id="main_image" src="image/1.jpg">
+					</div>
+					<div id="down" style="text-align:center;">
+						<button type="button" onclick="cng(-1);">前</button>
+						<span id="number">1/4</span>
+						<button type="button" onclick="cng(1);">次</button>
+					</div>
+				</li>
 			</ul>
 		</div>
 		<div class="ClearFix">
@@ -98,6 +107,17 @@
 						<div>果物の名前を入力してね！<br />
 							<button type="button" onclick="check();">開始</button>
 						</div>
+				<!--クリックされたボタン名を表示する-->
+				<div>クリックされたボタン名を表示する</div>
+				<div id="btg">
+					<button type="button">1</button>
+					<button type="button">2</button>
+					<button type="button">3</button>
+				</div>
+				<!--動く画像-->
+				<hr>
+				<div style="position:absolute;left:30px;border-style:solid;width:50px;height:50px;" id="moving"></div>
+				<button type="button" onclick="stop();" style="margin-top:70px;">ストップボタン</button>
 			</main>
 			<aside class="subbox">
 				<h3>カート</h3>
@@ -108,7 +128,7 @@
 		</div>
 		<footer class="foot"></footer>
 	</div>
-<script src="test.js"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html>
