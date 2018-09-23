@@ -259,6 +259,26 @@ window.addEventListener("load",
     },
     false);
 
+//一定時間ごとにごとに動く画像
+var moving = 30;
+var t;
+function move(){
+    moving = moving + 1;
+
+    mov = document.getElementById("moving");
+    mov.style.left = moving + "px";
+};
+
+window.addEventListener("load",
+    function move(){
+        t = setInterval("move()",100);
+    },
+    false);
+
+function stop(){
+    clearInterval(t);
+};
+
 ///スライドショー
 var slider = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg", ];
 var aaa = 0;
