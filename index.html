@@ -5,39 +5,23 @@
     <meta charset="UTF-8">
     <title>JavaTest</title>
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 </head>
 <body>
 	<div id="wallpaper">
 		<div class="top">
-			<p class="title">JavaScriptの練習</p>
+			<p class="title">JavaScript</p>
 		</div>
 		<div class="annai">
 			<ul>
-				<li>
-					<p class="name">リストフォー</p>
-					<button type="button" onclick="todo();">やることリスト</button>
-					<div id="todo"></div>
-				</li>
-				<li>
-					<p class="name">↓なしなし</p>
-					<div>お客様情報をご記入ください</div>
-					姓　：<input type="text" id="sei"><br />
-						名　：<input type="text" id="mei"><br />
-						住所：<input type="text" id="add"><br />
-						<p class="name">↓ズラ</p>
-						生年月日：<select id="nen"></select>年
-						<select id="gatsu"></select>月
-						<select id="hi"></select>日
-					<button type="button" onclick="soshin();">送信</button>
-				</li>
 				<li>
 					<div id="up" style="text-align:center;">
 						<img id="main_image" src="image/1.jpg">
 					</div>
 					<div id="down" style="text-align:center;">
-						<button type="button" onclick="cng(-1);">前</button>
+						<button type="button" onclick="cng(-1);" class="slide-button">前</button>
 						<span id="number">1/4</span>
-						<button type="button" onclick="cng(1);">次</button>
+						<button type="button" onclick="cng(1);" class="slide-button">次</button>
 					</div>
 				</li>
 			</ul>
@@ -120,10 +104,26 @@
 				<button type="button" onclick="stop();" style="margin-top:70px;">ストップボタン</button>
 			</main>
 			<aside class="subbox">
-				<h3>カート</h3>
-				<div id="cart"></div>
-				<hr>
-				<div><button type="button" onclick="al();">合計金額を計算</button><span id="al">ココに金額が表示されます</span></div>
+				<ul>
+					<li>
+						<p class="name">↓なしなし</p>
+						<div>お客様情報をご記入ください</div>
+						姓　：<input type="text" id="sei"><br />
+						名　：<input type="text" id="mei"><br />
+						住所：<input type="text" id="add"><br />
+						<p class="name">↓ズラ</p>
+						生年月日：<select id="nen"></select>年
+						<select id="gatsu"></select>月
+						<select id="hi"></select>日
+						<button type="button" onclick="soshin();">送信</button>
+					</li>
+					<hr>
+					<li>
+						<p class="name">リストフォー</p>
+						<button type="button" onclick="todo();">やることリスト</button>
+						<div id="todo"></div>
+					</li>
+				</ul>
 			</aside>
 		</div>
 		<footer class="foot">
