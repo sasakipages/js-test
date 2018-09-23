@@ -1,13 +1,22 @@
 //ToDoリスト
 function todo(){
-	var list, a, i;
-	list = ["あれ","これ","それ","どれ"];
-	a = "";
-	for(i = 0; i < list.length; i++){
-		a = a + list[i] + "<br />";
-	};
-	document.getElementById("todo").innerHTML = a;
+    var box,list,a,i;
+    box = ["あああ","いいい","ううう","えええ"];
+    list = document.getElementById("todo");
+    a = "";
+    for(i = 0; i < box.length; i++){
+        a = a + box[i] + "<br />";
+    }
+    list.innerHTML = a;
+
+    if(list.style.display == "none"){
+        list.style.display = "";
+    }else{
+        list.style.display = "none";
+    }
 };
+window.addEventListener("load",todo,false);
+
 
 //お客様情報
 function soshin(){
@@ -249,3 +258,27 @@ window.addEventListener("load",
         aaa.addEventListener("click",btn,false);
     },
     false);
+
+///スライドショー
+var slider = ["image/1.jpg", "image/2.jpg", "image/3.jpg", "image/4.jpg", ];
+var aaa = 0;
+function cng(i){
+    var i,num,str;
+    if(i == 1){
+        aaa++;
+        if(aaa >= slider.length){
+            aaa = 0;
+        }
+    }else{
+        aaa--;
+        if(aaa < 0){
+            aaa = slider.length-1;
+        }
+    }
+
+    document.getElementById('main_image').src = slider[aaa];
+
+    num = aaa + 1;
+    str = num  + "/" + slider.length;
+    document.getElementById("number").innerHTML = str;
+}
